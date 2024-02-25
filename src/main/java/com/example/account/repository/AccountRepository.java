@@ -12,5 +12,8 @@ import java.util.Optional;
 public interface AccountRepository extends JpaRepository<Account, Long> {
     Optional<Account> findFirstByOrderByIdDesc();
 
-    Integer countByAccountUser(AccountUser accuontUser)
+    Integer countByAccountUser(AccountUser accuontUser);
+
+    Optional<Account> findByAccountNumber(String AccountNumber);
+
 }
